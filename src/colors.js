@@ -64,6 +64,9 @@ var colors = function () {
      * @return {Array} Array containing R, G, B values
      */
     hexToRGB = function (h) {
+        if (h.indexOf('#') === 0) {
+            h = h.slice(1);
+        }
         var rgb = [hexToRed(h), hexToGreen(h), hexToBlue(h)];
         return rgb;
     },
